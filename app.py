@@ -101,12 +101,17 @@ if st.button("Predict detention risk"):
         f"{probability * 100:.2f}%"
     )
 
-    if probability < 0.02:
-        st.success("Low predicted risk")
-    elif probability < 0.10:
-        st.warning("Moderate predicted risk")
-    else:
-        st.error("Higher predicted risk")
+    st.subheader("Prediction")
+
+st.metric(
+    "Predicted detention risk",
+    f"{probability * 100:.2f}%"
+)
+
+st.caption(
+    "The score is a model-based estimate and should be interpreted together "
+    "with operational and professional judgement."
+)
 
     st.caption(
         "The score is a model-based estimate and should be interpreted together "
