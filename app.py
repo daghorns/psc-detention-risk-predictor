@@ -12,12 +12,13 @@ st.set_page_config(
 st.title("🚢 PSC Detention Risk Predictor")
 
 st.write(
-    "This application estimates the probability of a vessel being detained "
-    "during a planned Port State Control inspection."
+    "This application estimates detention risk for a planned USCG Port State Control inspection "
+    "using historical inspection data. The inspection type must already be known before the prediction is made."
 )
 
 st.info(
-    "Decision-support tool only. The prediction should not replace inspector judgement."
+    "Decision-support tool only. The prediction is intended to support inspection preparation and resource prioritization, "
+    "and should not replace inspector judgement."
 )
 
 model = joblib.load("psc_detention_model.pkl")
