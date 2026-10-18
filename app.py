@@ -94,16 +94,16 @@ if st.button("Predict detention risk"):
 
     probability = model.predict_proba(input_df)[0, 1]
 
+    st.subheader("Prediction")
+
+    st.metric(
+        "Predicted detention risk",
+        f"{probability * 100:.2f}%"
+    )
+    
 st.subheader("Prediction")
 
-st.metric(
-"Predicted detention risk",
-f"{probability * 100:.2f}%"
-)
-
-st.subheader("Prediction")
-
-st.metric(
+    st.metric(
     "Predicted detention risk",
     f"{probability * 100:.2f}%"
 )
