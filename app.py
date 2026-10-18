@@ -113,7 +113,7 @@ st.caption(
     "with operational and professional judgement."
 )
 
-    st.caption(
+st.caption(
         "The score is a model-based estimate and should be interpreted together "
         "with operational and professional judgement."
     )
