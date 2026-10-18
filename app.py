@@ -103,7 +103,7 @@ if st.button("Predict detention risk"):
     
 st.subheader("Prediction")
 
-    st.metric(
+st.metric(
     "Predicted detention risk",
     f"{probability * 100:.2f}%"
 )
